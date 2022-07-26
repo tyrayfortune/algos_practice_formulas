@@ -40,3 +40,9 @@
   // }
 
   // console.log(addition(2,4))
+
+
+
+  let searchme = "P1P5P4CCCcP2P6P3"
+  const regex = /c+/gi
+  console.log(searchme.match(regex))
