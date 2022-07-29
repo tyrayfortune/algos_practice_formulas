@@ -4,6 +4,32 @@
 // To use the .match() method, apply the method on a string and pass in the regex inside the parentheses.
 // Here's an example:
 
+
+//SIGNS:
+// ^ = matches a term to the start
+// [^] = matches any characters but the ones in the brackets 
+// $ = matches a term to the end
+// . =  matches a single character to any character
+// [ ] = matches any single charcter from the bracketed list, i.e  = b[aecro]d
+//  ( ) Parentheses, groups one or more regular expressions. i.e matches codexpedia\.(com|net|org)  codexpedia.com, codexpedia.net, and codexpedia.org.
+//  {n} = with one number inside matches exactly n times
+// {n,} =  represents min times to match
+// {n,m} = with ttwo numbers inside matches a min-max
+//  | = matches either the regex befo it or the regex exp after it (or statement)
+// + = matches 1 or more characters in front of the plus
+// * = matches 0 or more characters in front of the *
+// ! does not match the next char in regex.  i.e q(?![0-9])  if the charachter after q is not a digit, it will matches the q in those strings of abdqk, quit, qeig, but not q2kd, sdkq8d.
+// ? = matches 1 or 0 charas in front. i.e apples? would match apples or apple
+
+// BACKSLASHES \ = 
+    //  \n = line break
+    //  \t represents a tab
+    //  \w = [a-z0-9_]
+    // \W capital W matches everything BUT stuff under \w
+    // \d = [0-9]
+    // \s = matches whitespace, i.e space between letters
+    //  \S capitol S matches everything EXCEPT whitespace
+
 "Hello, World!".match(/Hello/);
 let ourStr = "Regular expressions";
 let ourRegex = /expressions/;
@@ -103,7 +129,7 @@ oPhrase.match(goRegex);
 
 // you used the caret character (^) inside a character set to create a negated character set in 
 // the form [^thingsThatWillNotBeMatched]. Outside of a character set, the caret is used to search 
-// for patterns at the beginning of strings.
+// FOR PATTERNS AT THE BEGGINGS OF STRINGS.
 
 let firstString = "Ricky is first and can be found.";
 let firstRegex = /^Ricky/;
@@ -129,13 +155,13 @@ storyRegex.test(noEnding);
 // This character class matches upper and lowercase letters plus numbers. Note, this character class also includes 
 // the underscore character (_).
 let longHand = /[A-Za-z0-9_]+/;
-let shortHand = /\w+/;
-let numbers = "42";
+let shortsHand = /\w+/;
+let numberss = "42";
 let varNames = "important_var";
-longHand.test(numbers);
-shortHand.test(numbers);
+longHand.test(numberss);
+shortsHand.test(numberss);
 longHand.test(varNames);
-shortHand.test(varNames);
+shortsHand.test(varNames);
 // All four of these test calls would return true.
 // These shortcut character classes are also known as shorthand character classes.
 
@@ -150,3 +176,22 @@ let sentence = "Coding!";
 numbers.match(shortHand);
 sentence.match(shortHand);
 // The first match call would return the value ["%"] and the second would return ["!"].
+
+
+
+// The shortcut to look for digit characters is \d, with a lowercase d. 
+// This is equal to the character class [0-9], which looks for a single character of any number between zero and nine.
+
+
+
+// The shortcut to look for non-digit characters is \D. This is equal to the character class [^0-9],
+//  which looks for a single character that is not a number between zero and nine.
+
+// You can search for whitespace using \s, which is a lowercase s. This pattern not only matches whitespace, 
+// but also carriage return, tab, form feed, and new line characters. You can think of it as
+//  similar to the character class [ \r\t\f\n\v].
+
+let whiteSpace = "Whitespace. Whitespace everywhere!"
+let spaceRegex = /\s/g;
+whiteSpace.match(spaceRegex);
+// This match call would return [" ", " "].
