@@ -11,15 +11,16 @@
 // $ = matches a term to the end
 // . =  matches a single character to any character
 // [ ] = matches any single charcter from the bracketed list, i.e  = b[aecro]d
-//  ( ) Parentheses, groups one or more regular expressions. i.e matches codexpedia\.(com|net|org)  codexpedia.com, codexpedia.net, and codexpedia.org.
+//  ( )  = Parentheses, groups one or more regular expressions. i.e matches codexpedia\.(com|net|org)  codexpedia.com, codexpedia.net, and codexpedia.org.
 //  {n} = with one number inside matches exactly n times
 // {n,} =  represents min times to match
 // {n,m} = with ttwo numbers inside matches a min-max
 //  | = matches either the regex befo it or the regex exp after it (or statement)
 // + = matches 1 or more characters in front of the plus
 // * = matches 0 or more characters in front of the *
-// ! does not match the next char in regex.  i.e q(?![0-9])  if the charachter after q is not a digit, it will matches the q in those strings of abdqk, quit, qeig, but not q2kd, sdkq8d.
-// ? = matches 1 or 0 charas in front. i.e apples? would match apples or apple
+// ! = does not match the next char in regex.  i.e q(?![0-9])  if the charachter after q is not a digit, it will matches the q in those strings of abdqk, quit, qeig, but not q2kd, sdkq8d.
+// ? = matches 1 or 0 charas in front. i.e apples? would match apples or apple, consider it an optional element
+// ?=...  = called a lookahead, which wants to see if it is contained in the string but doesnt add it. weird, google it
 
 // BACKSLASHES \ = 
     //  \n = line break
@@ -27,6 +28,7 @@
     //  \w = [a-z0-9_]
     // \W capital W matches everything BUT stuff under \w
     // \d = [0-9]
+    // \D matches all nondighits
     // \s = matches whitespace, i.e space between letters
     //  \S capitol S matches everything EXCEPT whitespace
 
@@ -195,3 +197,25 @@ let whiteSpace = "Whitespace. Whitespace everywhere!"
 let spaceRegex = /\s/g;
 whiteSpace.match(spaceRegex);
 // This match call would return [" ", " "].
+
+// Lookaheads are patterns that tell JavaScript to look-ahead in your string to check for patterns further along. 
+// This can be useful when you want to search for multiple patterns over the same string.
+// There are two kinds of lookaheads: positive lookahead and negative lookahead.
+// A positive lookahead will look to make sure the element in the search pattern is there, but won't actually match it.
+//  A positive lookahead is used as (?=...) where the ... is the required part that is not matched.
+// On the other hand, a negative lookahead will look to make sure the element in the search pattern is not there.
+//  A negative lookahead is used as (?!...) where the ... is the pattern that you do not want to be there. The rest 
+//  of the pattern is returned if the negative lookahead part is not present.
+// Lookaheads are a bit confusing but some examples will help.
+let quit = "qu";
+let noquit = "qt";
+let quRegex= /q(?=u)/;
+let qRegex = /q(?!u)/;
+quit.match(quRegex);
+noquit.match(qRegex);
+// Both of these match calls would return ["q"].
+// A more practical use of lookaheads is to check two or more patterns in one string. Here is a (naively) simple password 
+// checker that looks for between 3 and 6 characters and at least one number:
+let password = "abc123";
+let checkPass = /(?=\w{3,6})(?=\D*\d)/;
+checkPass.test(password);
