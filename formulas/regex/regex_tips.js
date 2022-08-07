@@ -1,8 +1,9 @@
 //KEY TERMS
 //FLAGS: used to search more specifilically. g = matches the pattern multiple times. i = makes regex case inses, ect.
 // CHARACTER CLASSES:  [ ], enables youi to seach for multiple thjings 
-// To use the .match() method, apply the method on a string and pass in the regex inside the parentheses.
-// Here's an example:
+// .match() = matches a phrase with regex guidelines
+// .test() = true/false boolean of weather statement passes regex
+// .replace() replaces parts of a var with what you want changed.
 
 
 //SIGNS:
@@ -21,7 +22,8 @@
 // ! = does not match the next char in regex.  i.e q(?![0-9])  if the charachter after q is not a digit, it will matches the q in those strings of abdqk, quit, qeig, but not q2kd, sdkq8d.
 // ? = matches 1 or 0 charas in front. i.e apples? would match apples or apple, consider it an optional element
 // ?=...  = called a lookahead, which wants to see if it is contained in the string but doesnt add it. weird, google it
-
+// (|) cheks for mixed group of characters. I.E /P(engu|umpk)in/ would return true for penguin or pumpkin
+// 
 // BACKSLASHES \ = 
     //  \n = line break
     //  \t represents a tab
@@ -219,3 +221,38 @@ noquit.match(qRegex);
 let password = "abc123";
 let checkPass = /(?=\w{3,6})(?=\D*\d)/;
 checkPass.test(password);
+
+
+// Say you want to match a word that occurs multiple times like below.
+let repeatStr = "row row row your boat";
+// You could use /row row row/, but what if you don't know the specific word repeated? Capture groups can be used to find repeated substrings.
+// Capture groups are constructed by enclosing the regex pattern to be captured in parentheses. In this case, the goal is to capture a word
+//  consisting of alphanumeric characters so the capture group will be \w+ enclosed by parentheses: /(\w+)/.
+// The substring matched by the group is saved to a temporary "variable", which can be accessed within the same regex using a backslash
+//  and the number of the capture group (e.g. \1). Capture 
+// groups are automatically numbered by the position of their opening parentheses (left to right), starting at 1.
+// The example below matches a word that occurs thrice separated by spaces:
+
+let repeatRegex1 = /(\w+) \1 \1/;
+repeatRegex.test(repeatStr); // Returns true
+repeatStr.match(repeatRegex1); // Returns ["row row row", "row"]
+// Using the .match() method on a string will return an array with the matched substring, along with its captured groups.
+
+
+// You can search and replace text in a string using .replace() on a string. The inputs for .replace() is first the regex 
+// pattern you want to search for. The second parameter is the string to replace the match or a function to do something.
+let wrongText = "The sky is silver.";
+let silverRegex = /silver/;
+wrongText.replace(silverRegex, "blue");
+// The replace call would return the string The sky is blue..
+// You can also access capture groups in the replacement string with dollar signs ($).
+"Code Camp".replace(/(\w+)\s(\w+)/, '$2 $1');
+// The replace call would return the string Camp Code.
+
+// ANOTHER EXAMPLE:
+
+// Write a regex and use the appropriate string methods to remove whitespace at the beginning and end of strings.
+// Note: The String.prototype.trim() method would work here, but you'll need to complete this challenge using regular expressions.
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g; // Change this line
+let result1 = hello.replace(wsRegex, ""); // Change this line
