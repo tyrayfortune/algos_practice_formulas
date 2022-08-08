@@ -42,13 +42,23 @@
     // console.log(addition(3,9))
 
 
-
   // let searchme = "P1P5P4CCCcP2P6P3"
   // const regex = /c+/gi
   // console.log(searchme.match(regex))
 
 
-  let quoteSample = "The five boxing wizards jump quickly.";
-let alphabetRegexV2 = /\w/g; // Change this line
-let result = quoteSample.match(alphabetRegexV2).length;
-console.log(result)
+//   let quoteSample = "The five boxing wizards jump quickly.";
+// let alphabetRegexV2 = /\w/g; // Change this line
+// let result = quoteSample.match(alphabetRegexV2).length;
+// console.log(result)
+
+
+// let simpleArray = ['one', 2, 'three', true, false, undefined, null];
+// console.log(simpleArray);
+
+// const arr = [2, 4, 5, 1, 7, 5, 2, 1];
+// // Only change code below this line
+//  let my = arr.splice(1,4)
+
+// // Only change code above this line
+// console.log(my);
