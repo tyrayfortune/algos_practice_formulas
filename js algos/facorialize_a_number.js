@@ -12,15 +12,20 @@
 //   factorialize(5);
 
   function factorialize(num) {
-    newNum = 0
-    for (let i = 0; i < num.length; i++) {
-        newNum *= num[i]
-        
-    }
-    console.log(num)
-    return num;
+    let newNum = 1
+    //running the each number of num, starting at 2.(cuz 1*1 is unessisary since newNum is already one)
+      for (let i = 2; i <= num; i++) {
+        console.log(i)
+        // multipling newNum to i at whatever iteration it is on.
+        newNum *= i
+      }
+
+    return newNum;
   }
   
-  console.log(factorialize(5));
-  //thought process
-  //
+console.log(factorialize(10));
+// console.log(factorialize(10));
+
+
+
+
