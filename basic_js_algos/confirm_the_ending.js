@@ -10,9 +10,13 @@
 //   confirmEnding("Bastian", "n");
 
 function confirmEnding(str, target) {
-    return str;
-  }
-  
-  confirmEnding("Bastian", "n");
+  //new RegExp is how you target dynamic data.
+    let regexTarget = new RegExp(target + "$", "i")
+    //returns test() true/false boolean
+    return regexTarget.test(str)
+    }
+    console.log(confirmEnding("Bastian", "n"));
 
   //initial thought process
+  //split?
+  //put newStr in array, target the last index, comp

@@ -27,3 +27,6 @@ function htmlColorNames(arr) {
   }
   
   console.log(htmlColorNames(['DarkGoldenRod', 'WhiteSmoke', 'LavenderBlush', 'PaleTurquoise', 'FireBrick']));
+
+
+
