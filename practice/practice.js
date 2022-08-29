@@ -63,3 +63,5 @@
 // // Only change code above this line
 // console.log(my);
 
+let word = "let this be the wird"
+console.log(word.toUpperCase())
