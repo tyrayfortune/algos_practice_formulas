@@ -17,6 +17,7 @@ let array1 = ['I', 'am', 'feeling', 'really', 'happy'];
 
 let newArray = array1.splice(3, 2);
 console.log(newArray)
+console.log(array1)
 // newArray has the value ['really', 'happy'].
 
 
