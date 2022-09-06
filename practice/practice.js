@@ -63,5 +63,9 @@
 // // Only change code above this line
 // console.log(my);
 
-let word = "let this be the wird"
-console.log(word.toUpperCase())
+// let word = "let this be the wird"
+// console.log(word.toUpperCase())
+
+var numArray = [140000, 104, 99];
+numArray = numArray.sort(function (a, b) {  return a - b;  });
+console.log(numArray)
