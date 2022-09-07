@@ -12,21 +12,24 @@
 
 
     function getIndexToIns(arr, num) {
-
-        //sorts the number alphabetically
+        //sorts the number alphabetically, look at your data structure sort() notes for reference.
         arr.sort(function(a, b){return a - b})
-        // console.log(arr)
+        //iterate thru the sorted array to look for a number larger then num
         for (let i = 0; i < arr.length; i++) {
+            //if you find a sorted number >= num, cutout the rest of the array using splice
+            // , this way you get then desired array lengfth
             if (arr[i] >= num) {
-                // console.log(arr[i])
                 arr.splice([i], arr.length)
-                // console.log(arr)
+                //break isnt necesary, as the splice removes rest of the elements so there is nothing left to check
+                //just left in to remember to use break sometimes haha
                 break
             }
         }
     return console.log(arr.length)
+
     }
 
+    //initial logic
     //sort()
     //for loops
     //if lnum > arr[i], splice
