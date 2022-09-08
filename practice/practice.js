@@ -66,6 +66,9 @@
 // let word = "let this be the wird"
 // console.log(word.toUpperCase())
 
-var numArray = [140000, 104, 99];
-numArray = numArray.sort(function (a, b) {  return a - b;  });
-console.log(numArray)
+// var numArray = [140000, 104, 99];
+// numArray = numArray.sort(function (a, b) {  return a - b;  });
+// console.log(numArray)
+
+let arr = ['hello', 'goodbye']
+console.log(arr.includes("hello"))

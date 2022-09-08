@@ -1,9 +1,9 @@
 // Sometimes you may need to iterate through all the keys within an object. This requires a specific syntax in JavaScript called a for...in 
 // statement. For our users object, this could look like:
 
-for (let user in users) {
-  console.log(user);
-}
+// for (let user in users) {
+//   console.log(user);
+// }
 // This would log Alan, Jeff, and Sarah - each value on its own line.
 
 // In this statement, we defined a variable user, and as you can see, this variable was reset during each iteration 
@@ -28,6 +28,9 @@ let users ={
   Sarah: {
     online: false
   }
+}
+for (let user in users) {
+  console.log(user);
 }
 
 function countOnline(usersObj) {

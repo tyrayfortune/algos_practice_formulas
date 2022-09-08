@@ -9,6 +9,14 @@
 //USEFUL FOR COMPARING TWO STRINGS TO SEE IF PART/ALL ARE COMPARABLE TO ONE ANOTHER, check out your Mutations algo in basic algos for
 //further example
 
+
+// PARAMATERS
+// 1) searchElement
+// Element to locate in the array.
+
+// 2) fromIndex (Optional)
+// The index to start the search at.
+
 const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
 
 console.log(beasts.indexOf('bison'));
