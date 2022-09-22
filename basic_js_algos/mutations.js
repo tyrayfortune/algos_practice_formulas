@@ -17,7 +17,7 @@ function mutation(arr) {
     //for loop to run thru secondArr 
     for (let i = 0; i < secondArr.length; i++) {
         console.log(firstArr.indexOf(secondArr[i]))
-        //indexOf() takes two paramaters with one being optional. here we jsut use one, the search element, and say that 
+        //indexOf() takes two paramaters with one being optional. here we just use one, the search element, and say that 
         //if fa doesnt have have sa[i]'s == -1 (which means the letter doesnt exist in fa) return false
       if (firstArr.indexOf(secondArr[i]) == -1) {
         return false;

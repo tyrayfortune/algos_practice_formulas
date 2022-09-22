@@ -19,5 +19,5 @@ var students = [
     { name: 'Katie', grade: 90 }
   ];
   
-  var studentGrades = students.filter(student => student.grade >= 90);
-  return studentGrades; // [ { name: 'Quincy', grade: 96 }, { name: 'Alexis', grade: 100 }, { name: 'Katie', grade: 90 } ]
+  var studentGrades = students.filter(student123 => student123.grade >= 90);
+  return console.log(studentGrades); // [ { name: 'Quincy', grade: 96 }, { name: 'Alexis', grade: 100 }, { name: 'Katie', grade: 90 } ]
