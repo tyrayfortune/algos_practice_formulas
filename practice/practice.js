@@ -105,28 +105,33 @@
 
 
 
-// The global variable
-const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
-// Change code below this line
-function add(bookName) {
-  let newBook = [...bookList]
-  newBook.push(bookName);
-  return newBook;
+// // The global variable
+// const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
+// // Change code below this line
+// function add(arr, bookName) {
+//   let newBook = [...arr]
+//   newBook.push(bookName);
+//   return newBook;
   
-  // Change code above this line
-}
-// Change code below this line
-function remove(bookName) {
-  const book_index = bookList.indexOf(bookName);
-  if (book_index >= 0) {
+//   // Change code above this line
+// }
+// // Change code below this line
+// function remove(arr, bookName) {
+//     let removeBook = [...arr]
+//     let book_index = bookList.indexOf(bookName)
+//     if (removeBook.indexOf(bookName) >= 0) {
+//       removeBook.splice(book_index, 1)
+//     }
+//     return removeBook
+//     // Change code above this line
+//   }
 
-    bookList.splice(book_index, 1);
-    return bookList;
 
-    // Change code above this line
-    }
-}
+// // console.log(add("harry potter"))
+// add(bookList, "harry potter"),
+// // remove("On The Electrodynamics of Moving Bodies")
+// console.log(remove(bookList, "On The Electrodynamics of Moving Bodies"))
+// // console.log(bookList)
+// // console.log(bookList)
 
-console.log(add("harry potter"))
-add("harry potter")
-console.log(bookList)
+// interaction 01699443.
