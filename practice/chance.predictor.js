@@ -10,7 +10,8 @@
 // add 1 to the var set to 0 
 //set if statement for if number is in ascending/descending order else continue
 // setif statement that if number is NOT adjecent to previous number, pop previous number from array, push new number in
-// return var that was set at 0 with iteration type, plus array to see what number it was
+// return var that was set at 0 with iteration type, plus array to see what number it wass
+
 
 
 function chance(num){
