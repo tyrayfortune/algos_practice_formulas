@@ -105,7 +105,7 @@
 
 
 
-// // The global variable
+// // The globbal variable
 // const bookList = ["The Hound of the Baskervilles", "On The Electrodynamics of Moving Bodies", "Philosophiæ Naturalis Principia Mathematica", "Disquisitiones Arithmeticae"];
 // // Change code below this line
 // function add(arr, bookName) {
