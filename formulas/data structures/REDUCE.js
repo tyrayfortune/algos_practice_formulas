@@ -109,7 +109,7 @@ const output = people.reduce((p,c, i, a) =>{
     //returning p, which is all the previous parts, and part, then final one.
     return p + part
 },"")
-// console.log(output)
+console.log(output)
 
 
 

@@ -18,6 +18,7 @@
         console.log(i)
         // multipling newNum to i at whatever iteration it is on.
         newNum *= i
+        console.log(`this is newNum:${newNum}`)
       }
 
     return newNum;
