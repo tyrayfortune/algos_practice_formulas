@@ -143,3 +143,6 @@
 // return console.log(sum)
 // }
 // hello()
+
+number = 5.12
+console.log(Number.isInteger(number))

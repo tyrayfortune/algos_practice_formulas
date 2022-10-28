@@ -1,5 +1,3 @@
-// Let's start with some simple array functions, which are methods on the array object prototype.
-//  In this exercise we are looking at Array.prototype.map(), or more simply map.
 
 // The map method iterates over each item in an array and returns a new array containing the results of 
 // calling the callback function on each element. It does this without mutating the original array.
