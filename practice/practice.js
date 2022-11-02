@@ -144,5 +144,14 @@
 // }
 // hello()
 
-number = 5.12
-console.log(Number.isInteger(number))
+// number = 5.12
+// console.log(Number.isInteger(number))
+function sentensify(str) {
+  // Only change code below this line
+  
+  
+  return console.log(str.split(/\W/).join(" "))
+
+  // Only change code above this line
+}
+sentensify("May-the-force-be-with-you")

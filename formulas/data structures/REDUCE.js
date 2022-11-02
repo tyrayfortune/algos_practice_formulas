@@ -26,6 +26,7 @@ const users = [
   ];
   
   const sumOfAges = users.reduce((sum, user) => sum + user.age, 0);
+  console.log(sumOfAges)
 //   console.log(sumOfAges);
 //   The console would display the value 64.
 
