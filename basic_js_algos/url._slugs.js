@@ -27,8 +27,8 @@ function urlSlug(title) {
 
 return title
     .toLowerCase()
-    .trim()
     .replace(/\s+/g, ' ')
+    .trim()
     .split(" ")
     .join("-")
 }
