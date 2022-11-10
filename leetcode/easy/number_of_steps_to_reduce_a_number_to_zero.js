@@ -42,7 +42,7 @@ var numberOfSteps = function(num) {
     while (num > 0) {
         //if its even
         if (num %2 === 0) {
-            //divide by two. make sure num = num / 2. if num / 2 goes into inf loop for some reason
+            //divide by two. make sure num = num / 2. if num / 2 goes into inf loop. because num just goes from 14/2 = 7, then 14/2 = 7 again and continues on that way forever
             num /=  2
         }   
         else {

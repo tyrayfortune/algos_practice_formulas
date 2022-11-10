@@ -22,8 +22,6 @@
 function chunkArrayInGroups(arr, size) {
     //create ampty array to push our new vars
     let newArr = []
-    let i = 0
-    //for loop version
     //for loop where we are increimenting by size instead of i++ so we will be at the right index to slice every time
     for (let i = 0; i < arr.length; i+=size) {
         //pushinng the sliced arr to newarr.
