@@ -9,6 +9,7 @@ const myArray = text.split(" ");
 let text1 = "How are you doing today?";
 const myArray1 = text1.split(" ");
 let word = myArray1[1];
+console.log(word)
 
 // Split the characters, including spaces:
 const myArray2 = text.split("");
