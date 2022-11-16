@@ -157,14 +157,34 @@
 // sentensify("May-the-force-be-with-you")
 
 
-function bouncer(arr) {
-  let newArr= []
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i]) {
-      newArr.push(arr[i])
+// function bouncer(arr) {
+//   let newArr= []
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i]) {
+//       newArr.push(arr[i])
+//     }
+//   }
+//   return newArr
+// }
+
+// console.log(bouncer([7, "ate", "", false, 9]))
+
+
+function mutation(arr) {
+let newArr = [arr[0]+arr[1]]
+  return console.log(newArr.filter((any) => {
+    if (newArr != arr[0] || arr[1]) {
+      return false
     }
-  }
-  return newArr
+    return true
+  }))
 }
 
-console.log(bouncer([7, "ate", "", false, 9]))
+function mutation(arr) {
+  return arr;
+}
+
+mutation(["hello", "hey"]);
+
+mutation(["hello", "hey"]);
+mutation(["hello", "Hello"])

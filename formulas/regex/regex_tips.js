@@ -63,8 +63,7 @@ let huRegex = /hu./;
 huRegex.test(humStr);
 huRegex.test(hugStr);
 // Both of these test calls would return true.
-// Complete the regex unRegex so that it matches the strings run, sun, fun, pun, nun, and bun.
-//  Your regex should use the wildcard character.
+
 
 
 
@@ -89,7 +88,7 @@ bogStr.match(bgRegex);
 let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
 let vowelRegex = /[aeiou]/gi; // g for global flag so keeps searching. i for insesitive flag so not case sensitive
 let result = quoteSample.match(vowelRegex); // passing the vowelregex to be checking the quoteSample
-
+console.log(result)
 
 // ALSO:
 // you could also create a set of characters that you do not want to match. 
