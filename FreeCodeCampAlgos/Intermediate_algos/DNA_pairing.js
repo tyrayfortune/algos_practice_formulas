@@ -17,8 +17,18 @@
 
 
   function pairElement(str) {
-  
-    return str;
+    //creating an obj for pair lookup
+    let dna = {
+        A: "T",
+        T: "A",
+        C: "G",
+        G: "C"
+    }
+    
+     let splitStr = str.split("")
+    //mapping any character to an array of characters and also the character that aligns with it in the DNA OBJ
+    return splitStr.map(cyclingThru => [cyclingThru, dna[cyclingThru]])
   }
   
-  pairElement("GCG");
+  console.log(pairElement("GCG"))
+//   pairElement("ATCGA");
