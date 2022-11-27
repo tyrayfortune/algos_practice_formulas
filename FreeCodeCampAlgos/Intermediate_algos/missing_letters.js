@@ -16,7 +16,7 @@
     let finalProduct =""
     //for loop going thru modfied alphabet
     for (let i = 0; i < newAlphabet.length; i++) {
-        //if the str doesnt half newAlphabet[i], then push name to equal that eltter and break
+        //if the str doesnt half newAlphabet[i], then push name to equal that letter and break
         if (!str.includes(newAlphabet[i])) {
             finalProduct = newAlphabet[i]
             break
