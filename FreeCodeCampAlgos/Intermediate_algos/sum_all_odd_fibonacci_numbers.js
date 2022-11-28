@@ -17,16 +17,19 @@
 //   }
 
   function sumFibs(num) {
-    currentNum = 1
-    previousNum = 0
-    result = 0
+    let currentNum = 1
+    let previousNum = 0
+    let result = 0
     while (currentNum <= num) {
-        if (condition) {
-            
-        }
-        currentNum ++
+      //if statement to add all odd numbers to our results
+    if (currentNum % 2 === 1) {
+      result += currentNum
     }
-    return num;
+    //methods to update current and prev number
+    currentNum += previousNum
+    previousNum = currentNum - previousNum
+    }
+    return result
   }
   
   console.log(sumFibs(4))
@@ -34,3 +37,5 @@
 //initial thoughts
 //have a num = 1, as its the first number
 //for loop thru, iterating by the previous number
+
+console.log(4 % 4)

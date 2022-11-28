@@ -170,21 +170,32 @@
 // console.log(bouncer([7, "ate", "", false, 9]))
 
 
-function mutation(arr) {
-let newArr = [arr[0]+arr[1]]
-  return console.log(newArr.filter((any) => {
-    if (newArr != arr[0] || arr[1]) {
-      return false
+// function mutation(arr) {
+// let newArr = [arr[0]+arr[1]]
+//   return console.log(newArr.filter((any) => {
+//     if (newArr != arr[0] || arr[1]) {
+//       return false
+//     }
+//     return true
+//   }))
+// }
+
+// function mutation(arr) {
+//   return arr;
+// }
+
+// mutation(["hello", "hey"]);
+
+// mutation(["hello", "hey"]);
+// mutation(["hello", "Hello"])
+
+function math(a){
+
+
+    if (a % 0 === 0) {
+      console.log(a)
     }
-    return true
-  }))
+
+return undefined
 }
-
-function mutation(arr) {
-  return arr;
-}
-
-mutation(["hello", "hey"]);
-
-mutation(["hello", "hey"]);
-mutation(["hello", "Hello"])
+console.log(math(27))
