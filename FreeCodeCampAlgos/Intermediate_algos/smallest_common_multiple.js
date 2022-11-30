@@ -30,10 +30,10 @@ function smallestCommons(arr) {
         multiple += max; 
         //resetting i to the highest number so it doesnt go down to 0
         i = max;
-        } 
-    }
+    } 
+}
+return multiple;  
 
-    return multiple;  
 }
     console.log(smallestCommons([5,1]))
 //   console.log(smallestCommons([23, 18]))
