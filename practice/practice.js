@@ -189,13 +189,19 @@
 // mutation(["hello", "hey"]);
 // mutation(["hello", "Hello"])
 
-function math(a){
+// function math(a){
 
 
-    if (a % 0 === 0) {
-      console.log(a)
-    }
+//     if (a % 0 === 0) {
+//       console.log(a)
+//     }
 
-return undefined
-}
-console.log(math(27))
+// return undefined
+// }
+// console.log(math(27))
+
+
+let arr  = [1,2,3,4,5,6,7,8,9]
+let blank = []
+blank = arr.splice(1,10)
+console.log(blank)
