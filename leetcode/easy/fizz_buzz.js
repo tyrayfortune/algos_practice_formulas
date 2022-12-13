@@ -22,43 +22,42 @@
 // };
 
 
-// var fizzBuzz = function(n) {
-//     //an array to store all your variables
-//     let answer =[]
-//     for (let i = 1; i <= n; i++) {
-//         //going from strictest rule, then pushing out. otherwise this one wouldnt catch the else if statements would
-//         if (i % 3 == 0 && i % 5 == 0) {
-//             answer.push("FizzBuzz")
-//         }
-//         else if (i % 5 == 0){
-//             answer.push("Buzz")
-//         }
-//         else if (i % 3 == 0){
-//             answer.push("Fizz")
-//         }
-//         else {
-//             //returning in string format as request by problem
-//             answer.push(String(i))
-//         }
+var fizzBuzz = function(n) {
+    //an array to store all your variables
+    let answer =[]
+    for (let i = 1; i <= n; i++) {
+        //going from strictest rule, then pushing out. otherwise this one wouldnt catch the else if statements would
+        if (i % 3 == 0 && i % 5 == 0) {
+            answer.push("FizzBuzz")
+        }
+        else if (i % 5 == 0){
+            answer.push("Buzz")
+        }
+        else if (i % 3 == 0){
+            answer.push("Fizz")
+        }
+        else {
+            //returning in string format as request by problem
+            answer.push(String(i))
+        }
         
-//     }
-//     return answer
-// };
-
-
-
-//copied this one from LeetCode
-const fizzBuzz = n => {
-    return new Array(n).fill(0).map((v, i) => {
-        if ((i+1) % 15 === 0)  return 'FizzBuzz'
-        if ((i+1) % 3 === 0) return 'Fizz'
-        if ((i+1) % 5 === 0) return 'Buzz'
-        return `${i+1}`
-    })
-}
-
+    }
+    return answer
+};
 
 n = 15
 // n=3
 // n=5
 console.log(fizzBuzz(n))
+
+//copied this one from LeetCode
+// const fizzBuzz = n => {
+//     return new Array(n).fill(0).map((v, i) => {
+//         if ((i+1) % 15 === 0)  return 'FizzBuzz'
+//         if ((i+1) % 3 === 0) return 'Fizz'
+//         if ((i+1) % 5 === 0) return 'Buzz'
+//         return `${i+1}`
+//     })
+// }
+
+
