@@ -14,11 +14,23 @@
 
 
 
-function chance(num){
-    let arr =[]
-    let iterations = 0
+// function chance(num){
+//     let arr =[]
+//     let iterations = 0
 
-return num
+// return num
+// }
+
+// console.log(chance(14))
+
+
+
+function countdown (number){
+    if (number >=0) {
+        console.log("first step into recursion")
+        return
+    }
+    countdown(number -1)
 }
-
-console.log(chance(14))
+    console.log(countdown(5))
+    
