@@ -37,7 +37,7 @@ var fizzBuzz = function(n) {
             answer.push("Fizz")
         }
         else {
-            //returning in string format as request by problem
+            //returnin in string format as request by problem
             answer.push(String(i))
         }
         
