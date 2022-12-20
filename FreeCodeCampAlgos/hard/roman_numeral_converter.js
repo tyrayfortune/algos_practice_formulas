@@ -49,9 +49,11 @@ function convertToRoman(num) {
     ['IV', 4],
     ['I', 1]
     ];
-    //for loop that goes over the roman array, as it will always be longer then what is needed
+    //for loop that goes over the roman array
     for (let i = 0; i < roman.length; i++) {
+        console.log(roman[i])
         //a while loop to run down the numbers till it hits 0, as the lowers roman numeral is 1, it will break the loop at 0
+        //it starts at the highest number in the array that num is greater than, then works down
         while (num >= roman[i][1]) {
             answer += roman[i][0]
             num -= roman[i][1]
