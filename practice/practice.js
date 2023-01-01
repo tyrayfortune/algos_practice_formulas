@@ -206,5 +206,9 @@
 // blank = arr.splice(1,10)
 // console.log(blank)
 
+function repeatStringNumTimes(str, num) {
+  return str;
+}
 
+repeatStringNumTimes("abc", 3);
 

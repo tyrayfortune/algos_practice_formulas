@@ -37,7 +37,7 @@
 "Hello, World!".match(/Hello/);
 let ourStr = "Regular expressions";
 let ourRegex = /expressions/;
-ourStr.match(ourRegex);
+console.log(ourStr.match(ourRegex));
 // Here the first match would return ["Hello"] and the second would return ["expressions"].
 
 

@@ -31,7 +31,6 @@ function palindrome(str) {
     let regex = /[1234567890abcdefghijklmnopqrstuvwxyz]/gi
     let finalStr = str.toLowerCase().match(regex)
     let reversedArr = []
-
     //for returning if there is no alphanumeric characters to compare
     if (!finalStr) {
         return true
