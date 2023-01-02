@@ -206,9 +206,30 @@
 // blank = arr.splice(1,10)
 // console.log(blank)
 
+// function repeatStringNumTimes(str, num) {
+//   if (num < 0) {
+//     return ""
+//   }
+//   let newStr = str.split(" ")
+//   let answer = []
+
+//   for (let i = 0; i < num; i++) {
+//     answer.push(newStr[0])
+//   }
+//   return answer.join("")
+// }
+
 function repeatStringNumTimes(str, num) {
-  return str;
+  if (num <= 0) {
+    return ""
+  }
+  newStr = str
+  for (let i = 1; i < num; i++) {
+    newStr += str
+    
+  }
+  return newStr
 }
 
-repeatStringNumTimes("abc", 3);
+console.log(repeatStringNumTimes("abc", 0))
 
