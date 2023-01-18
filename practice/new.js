@@ -1,26 +1,34 @@
-function wordFrequency(string) {
-    // Create an empty object to store the frequency of each word
-    const frequency = {};
-  
-    // Split the string into an array of words
-    const words = string.split(' ');
-  
-    // Loop through the array of words
-    for (const word of words) {
-      // If the word is not in the frequency object, set its frequency to 1
-      if (!frequency[word]) {
-        frequency[word] = 1;
-      } else {
-        // If the word is already in the frequency object, increment its frequency by 1
-        frequency[word] += 1;
-      }
+// function test (n){
+// let answer = 0
+//     for (let i = 0; i <= n; i++) {
+//         answer += i
+//         console.log(answer)
+//     }
+// return answer
+// }
+
+// console.log(test(4))
+
+// function test(arr){
+//     let newArr = []
+//     for (const elem of arr) {
+//         if (elem % 2 == 0) {
+//             newArr.push(elem)
+//         }
+//     }
+//     return console.log(newArr)
+// }
+
+// test([1,2,3,4,5,6])
+
+
+function test(arr){
+    let answer = 0
+    for (const elem in arr){
+        if (arr[elem] % 2== 0) {
+            answer += arr[elem]
+        }
     }
-  
-    // Return the frequency object
-    return frequency;
-  }
-  
-  // Test the function
-  console.log(wordFrequency('the quick brown fox jumps over the lazy dog'));
-  // Output: { the: 2, quick: 1, brown: 1, fox: 1, jumps: 1, over: 1, lazy: 1, dog: 1 }
-  
+    return console.log(answer)
+}
+test([1,2,3,4,5,6,7,8])
