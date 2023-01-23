@@ -2,7 +2,7 @@
 //  and elements can be added or removed over time; in other words, arrays are mutable. In this challenge, we will look at two methods 
 //  with which we can programmatically modify an array: Array.push() and Array.unshift().
 // Both methods take one or more elements as parameters and add those elements to the array the method is being called on; the push() 
-// method adds elements to the end of an array, and unshift() adds elements to the beginning. Consider the following:
+// method adds elements to the end of an array, and unshift() adds elements to the beginning.. Consider the following:
 
 let twentyThree = 'XXIII';
 let romanNumerals = ['XXI', 'XXII'];
