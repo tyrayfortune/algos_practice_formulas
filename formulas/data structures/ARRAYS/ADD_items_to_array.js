@@ -9,7 +9,7 @@ let romanNumerals = ['XXI', 'XXII'];
 
 
 romanNumerals.unshift('XIX', 'XX');
-// romanNumerals would have the value ['XIX', 'XX', 'XXI', 'XXII'].
+// romanNumerals would have the value ['XIX', 'XX', 'XXI', 'XXII'].s
 
 romanNumerals.push(twentyThree);
 // romanNumerals would have the value ['XIX', 'XX', 'XXI', 'XXII', 'XXIII']. Notice that we can also pass variables, which allows 
