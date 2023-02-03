@@ -61,10 +61,10 @@ function palindrome(str) {
 }
 
 console.log(palindrome("almostomla"))
-console.log(palindrome("1 eye for of 1 eye."))
-console.log(palindrome("My age is 0, 0 si ega ym."))
-console.log(palindrome("nope"))
-console.log(palindrome("0_0 (: /-\ :) 0-0"))
+// console.log(palindrome("1 eye for of 1 eye."))
+// console.log(palindrome("My age is 0, 0 si ega ym."))
+// console.log(palindrome("nope"))
+// console.log(palindrome("0_0 (: /-\ :) 0-0"))
 
 
 
