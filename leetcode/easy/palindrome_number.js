@@ -21,6 +21,7 @@
 // };
 
 var isPalindrome = function(x) {
+    //have to put the numbers into a STR first to split it into an array 
     let arr = String(x).split("")
     //making a reversed array, NOTE: that directly using arr will manipulate it to be reveresed, so we use a copy
     let reverseArr = [...arr].reverse()
