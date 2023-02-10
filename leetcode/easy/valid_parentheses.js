@@ -21,24 +21,34 @@
 // };
 
 var isValid = function(s) {
-    let obj = {
-        "(" : ")",
-        "[" : "]",
-        "{" : "}"
-    }
-    let arr = s.split("")
-    for (const elem of arr) {
-        if (obj[elem]) {
-            if (elem != obj[elem]) {
-                console.log(obj[elem])
-            }
+    //create an empty stack
+    var stack = [];
+    //create an obj to check each element
+    var map = {
+        ')': '(',
+        '}': '{',
+        ']': '[',
+    };
+    //start by having the inital element
+    stack.push(s[0]);
+    
+    for(var i = 1;i<s.length;i++) {
+        //if the stack isnt 0, and the stack =map, pop the elemnt in stack to do the next
+        if (stack.length !=0 && stack[stack.length-1] === map[s[i]]) {
+            stack.pop();
+        } else {
+            //otherwise push the element
+            stack.push(s[i]);
         }
     }
+    
+    //will be true/false, based upon if the correct stack amount is pushed
+    return stack.length == 0;
 };
 
 
 console.log(isValid("()[]{}"))
-// console.log(isValid("(]"))
+console.log(isValid("(]"))
 
 //create obj for the inital types
 //loop through, if the type matches the next elements closing charcter i++
