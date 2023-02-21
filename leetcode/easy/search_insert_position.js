@@ -38,6 +38,18 @@ var searchInsert = function(nums, target) {
     return nums.length
 };
 
+//binary search
+var searchInsert = function(nums, target) {
+    let pivot, left = 0, right = nums.length -1
+    while (left<= right){
+        pivot = left + Math.floor((right-left)/2)
+        if(nums[pivot] == target) return pivot
+        if (target< nums[pivot]) right = pivot - 1
+        else left = pivot +1
+    }
+return left
+};
+
 console.log(searchInsert([1,3,5,6],5))
 console.log(searchInsert([1,3,5,6],2))
 console.log(searchInsert([1,3,5,6],7))
