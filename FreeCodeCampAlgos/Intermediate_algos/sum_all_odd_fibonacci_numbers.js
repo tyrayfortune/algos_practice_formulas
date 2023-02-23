@@ -21,7 +21,7 @@
     let previousNum = 0
     let result = 0
     while (currentNum <= num) {
-      //if statement to add all odd numbers to our results
+      //if statement to add all odd numbers to our resultss
     if (currentNum % 2 === 1) {
       result += currentNum
     }
