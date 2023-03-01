@@ -5,8 +5,9 @@
 const numbers = [10, 50, 8, 220, 110, 11];
 
 numbers.some(function(currentValue) {
-  return currentValue < 10;
+  return currentValue < 10
 });
+
 // The some method would return true.
 
 // Use the some method inside the checkPositive function to check if any element in arr is positive. 
