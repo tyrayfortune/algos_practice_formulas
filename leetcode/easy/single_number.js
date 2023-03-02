@@ -30,25 +30,24 @@
 //     }
 // };
 
-var singleNumber = function(nums) {
-    //setting result to be first number in the arr
-    var result = nums[0];
-    for(var i = 1; i < nums.length; i++) {
-        //using the XOR operator, explained below
-        result = result^nums[i];
-    }
-    return result;
+const singleNumber = (nums) => {
+    let res = 0;
+    //using XOR operator more info below
+    nums.forEach(num => {res ^= num;});
+        
+    return res;
 };
 
 console.log(singleNumber([2,2,1]))
 console.log(singleNumber([4,1,2,1,2]))
 console.log(singleNumber([1]))
 
-//Let's go through the steps of the singleNumber function using the input array [4, 1, 2, 1, 2]:
-// result is initialized to the first number in the array, which is 4.
-// In the first iteration of the loop, result is XOR-ed with the second number in the array, which is 1. This results in 5 (which is 100 XOR 001 in binary notation).
-// In the second iteration of the loop, result is XOR-ed with the third number in the array, which is 2. This results in 7 (which is 101 XOR 010 in binary notation).
-// In the third iteration of the loop, result is XOR-ed with the fourth number in the array, which is 1 again. This results in 6 (which is 110 XOR 001 in binary notation).
-// In the fourth iteration of the loop, result is XOR-ed with the fifth number in the array, which is 2 again. This results in 4 (which is 100 XOR 010 in binary notation).
-// There are no more numbers in the array to iterate over, so the final value of result is 4.
-// Therefore, the singleNumber function returns 4 as the single number that appears only once in the array [4, 1, 2, 1, 2].
+// The variable res is initialized to 0.
+// The forEach method is used to iterate over each number in the nums array.
+// For each number in the array, the XOR operator is used to update the value of res. Specifically, res is XOR-ed 
+// with the current number in the array.
+// The final value of res is returned as the single number that appears only once in the array.
+// The forEach method is a built-in method in JavaScript arrays that allows you to iterate over the elements of an array. 
+// It takes a callback function as its argument, which is executed for each element in the array. In this case,
+//  the callback function takes the current number in the array as its argument and uses the XOR operator to update 
+//  the value of res.
