@@ -219,17 +219,17 @@
 //   return answer.join("")
 // }
 
-function repeatStringNumTimes(str, num) {
-  if (num <= 0) {
-    return ""
-  }
-  newStr = str
-  for (let i = 1; i < num; i++) {
-    newStr += str
+// function repeatStringNumTimes(str, num) {
+//   if (num <= 0) {
+//     return ""
+//   }
+//   newStr = str
+//   for (let i = 1; i < num; i++) {
+//     newStr += str
     
-  }
-  return newStr
-}
+//   }
+//   return newStr
+// }
 
-console.log(repeatStringNumTimes("abc", 0))
+// console.log(repeatStringNumTimes("abc", 0))
 
