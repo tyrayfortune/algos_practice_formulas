@@ -17,19 +17,19 @@
 // }
 
 // better version still yours Big-O = O(logn)
-function powerOfTwo(n){
-    // if its an odd number (besides 1) then its not a power of two, return false
-    if(n % 2 ===1 && n != 1){
-        return false
-    }
-    //multiply each iteration by two to cut down runtime
-    for (let i = 1; i < n; i*=2) {
-        if (i === n) {
-            return true
-        }
-    }
-    return false
-}
+// function powerOfTwo(n){
+//     // if its an odd number (besides 1) then its not a power of two, return false
+//     if(n % 2 ===1 && n != 1){
+//         return false
+//     }
+//     //multiply each iteration by two to cut down runtime
+//     for (let i = 1; i < n; i*=2) {
+//         if (i === n) {
+//             return true
+//         }
+//     }
+//     return false
+// }
 console.log(powerOfTwo(1))
 console.log(powerOfTwo(2))
 console.log(powerOfTwo(4))
