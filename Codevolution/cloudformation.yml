@@ -1,0 +1,22 @@
+
+include:
+  - template: Terraform.gitlab-ci.yml
+
+variables:
+  AWS_ACCESS_KEY_ID: $AWS_ACCESS_KEY_ID
+  AWS_SECRET_ACCESS_KEY: $AWS_SECRET_ACCESS_KEY
+  TF_STATE_NAME: default
+  TF_VAR_agent_token:    be1sMKRdGH4jRbx1kgRhAv23HL37tFyVscV6DRJeiHZiBooTXQ
+  TF_VAR_kas_address:      wss://kas.gitlab.com 
+
+stages:
+  - init
+  - validate 
+  - test
+  - build
+  - deploy
+  - cleanup
+
+destroy:
+  extends: .terraform:destroy
+  needs: []
