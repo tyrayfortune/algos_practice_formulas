@@ -8,32 +8,24 @@
 //   }
   
 //   largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
-
-function largestOfFour(arr) {
-  //blank place to put arr
-  const results = [];
-  //initial loop for the array
+function largestOfFour(arr){
+  let largest = []
   for (let i = 0; i < arr.length; i++) {
-    //place to store the largest number, starting at the 1st number
-    let largestNumber = arr[i][0];
-    // console.log(arr[i][0])
-    //second loop to go thru each subarray
-    for (let j = 1; j < arr[i].length; j++) {
-      //if any number is bigger then current largest number, replace it
-      if (arr[i][j] > largestNumber) {
-        largestNumber = arr[i][j];
+    //asigning a variable fo the start of every inner array to test against highest number
+    let currentHighest = arr[i][0]
+    for (let j = 0; j <arr[i].length; j++){
+      if (arr[i][j] > currentHighest) {
+        currentHighest = arr[i][j]
       }
     }
-    //in outer for loop, set results to the largest number, using I
-    results[i] = largestNumber;
+    //be sure to push in outer forloop not inner
+    largest.push(currentHighest)
   }
 
-  return results;
+  return largest
 }
-  
+
+
   console.log(largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]));
 
-  //initial thought process
-  //loop thru array
-  //if statement for biggest number
-  //push to new empty arr
+
